@@ -1,43 +1,50 @@
 function numbersOnly(event)
 {
-    document.getElementById("displayarea").value="";
+    
    var charCode = (event.which) ? event.which : event.keyCode;
    if(charCode==43)
    {
     document.getElementById("displayarea").value=eval(document.getElementById("display").value);
     document.getElementById("display").value=eval(document.getElementById("display").value)+"+";
-    // document.getElementById("displayarea").value="";
+    document.getElementById("displayarea").value="";
     
    }
    if(charCode==45)
    {
     document.getElementById("displayarea").value=eval(document.getElementById("display").value);
     document.getElementById("display").value=eval(document.getElementById("display").value)+"-";
+    document.getElementById("displayarea").value="";
 
    }
    if(charCode==42)
    {
     document.getElementById("displayarea").value=eval(document.getElementById("display").value);
     document.getElementById("display").value=eval(document.getElementById("display").value)+"*";
+    document.getElementById("displayarea").value="";
 
    }
    if(charCode==47)
    {
     document.getElementById("displayarea").value=eval(document.getElementById("display").value);
     document.getElementById("display").value=eval(document.getElementById("display").value)+"/";
-
+    document.getElementById("displayarea").value="";
    }
    if (charCode == 46){
     document.getElementById("display").value+=".";
    }
-   if(charCode==61)
+   if(charCode==61||charCode==13)
    {
    
   
     // document.getElementById("displayarea").value="";
     document.getElementById("displayarea").value=eval(document.getElementById("display").value);
+    document.getElementById("display").value="";
 
 
+   }
+   if(charCode==67||charCode==99){
+    document.getElementById("displayarea").value="";
+    document.getElementById("display").value="";
    }
    
 

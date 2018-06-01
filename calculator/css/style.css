@@ -22,8 +22,9 @@ body{
 #maincontent{
     margin-top:  100px;
     /* position: relative; */
-    height: 335px;
+    height: 415px;
     background-color: white;
+    border-radius: 20px;
 }
 #operators{
     font-size: 20px;

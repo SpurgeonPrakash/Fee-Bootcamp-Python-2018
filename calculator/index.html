@@ -14,6 +14,8 @@
      <script src="js/calcul.js"></script>
      <!--external style link-->
      <link rel="stylesheet" href="css/style.css">
+     <!--script external source for mouse handling-->
+     <script src="js/mouseevents.js"></script>
      <!--materialize icons header-->
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Calculator(python)</title>
@@ -28,71 +30,71 @@
                 <button class="waves-effect waves-light btn-small" id="backspace">
                         <i class="material-icons right">backspace</i>backspace
                 </button>
-                <br><br>
+                <br><br><br>
                 <!-- <div class="container"> -->
                     <div class="row" id="buttons">
                         <div class="col l3 m3 s3">
-                            <button class="btn-floating btn-medium waves-effect waves-light red">1</button>
+                            <button class="btn-floating btn-medium waves-effect waves-light red"onclick="findNumber('1')" >1</button>
                         </div>
                         <div class="col l3 m3 s3">
-                            <button class="btn-floating btn-medium waves-effect waves-light red">2</button>
+                            <button class="btn-floating btn-medium waves-effect waves-light red" onclick="findNumber('2')">2</button>
                         </div>
                         <div class="col l3 m3 s3">
-                            <button class="btn-floating btn-medium waves-effect waves-light red">3</button>
+                            <button class="btn-floating btn-medium waves-effect waves-light red" onclick="findNumber('3')">3</button>
                         </div>
                         <div class="col l3 m3 s3">
-                            <button class="btn-floating btn-medium waves-effect waves-light red">
+                            <button class="btn-floating btn-medium waves-effect waves-light red" onclick="symbol('+')">
                                     <i class="material-icons">add</i>
                             </button>
                         </div>
-                    <br><br>
+                    <br><br><br>
                         <div class="col l3 m3 s3">
-                            <button class="btn-floating btn-medium waves-effect waves-light red">4</button>
+                            <button class="btn-floating btn-medium waves-effect waves-light red" onclick="findNumber('4')">4</button>
                         </div>
                         <div class="col l3 m3 s3">
-                            <button class="btn-floating btn-medium waves-effect waves-light red">5</button>
+                            <button class="btn-floating btn-medium waves-effect waves-light red" onclick="findNumber('5')">5</button>
                         </div>
                         <div class="col l3 m3 s3">
-                            <button class="btn-floating btn-medium waves-effect waves-light red">6</button>
+                            <button class="btn-floating btn-medium waves-effect waves-light red" onclick="findNumber('6')">6</button>
                         </div>
                         <div class="col l3 m3 s3">
-                            <button class="btn-floating btn-medium waves-effect waves-light red">
+                            <button class="btn-floating btn-medium waves-effect waves-light red" onclick="symbol('-')">
                                <span id="operators">-</span>
                             </button>
                         </div>
-                    <br><br>
+                    <br><br><br>
                     <div class="col l3 m3 s3">
-                        <button class="btn-floating btn-medium waves-effect waves-light red">7</button>
+                        <button class="btn-floating btn-medium waves-effect waves-light red" onclick="findNumber('7')">7</button>
                     </div>
                     <div class="col l3 m3 s3">
-                        <button class="btn-floating btn-medium waves-effect waves-light red">8</button>
+                        <button class="btn-floating btn-medium waves-effect waves-light red" onclick="findNumber('8')">8</button>
                     </div>
                     <div class="col l3 m3 s3">
-                        <button class="btn-floating btn-medium waves-effect waves-light red">9</button>
+                        <button class="btn-floating btn-medium waves-effect waves-light red"   onclick="findNumber('9')">9</button>
                     </div>
                     <div class="col l3 m3 s3">
-                        <button class="btn-floating btn-medium waves-effect waves-light red">
+                        <button class="btn-floating btn-medium waves-effect waves-light red" onclick="symbol('*')">
                             <span id="operators">*</span>
                         </button>
                     </div>
-                    <br><br>
+                    <br><br><br>
                     <div class="col l3 m3 s3">
-                        <button class="btn-floating btn-medium waves-effect waves-light red">c</button>
+                        <button class="btn-floating btn-medium waves-effect waves-light red" onclick="clearAll()">c</button>
                     </div>
                     <div class="col l3 m3 s3">
-                        <button class="btn-floating btn-medium waves-effect waves-light red">0</button>
+                        <button class="btn-floating btn-medium waves-effect waves-light red" onclick="findNumber('0')">0</button>
                     </div>
                     <div class="col l3 m3 s3">
-                        <button class="btn-floating btn-medium waves-effect waves-light red">.</button>
+                        <button class="btn-floating btn-medium waves-effect waves-light red" onclick='v(".")'>.</button>
                     </div>
                     <div class="col l3 m3 s3">
-                        <button class="btn-floating btn-medium waves-effect waves-light red">
+                        <button class="btn-floating btn-medium waves-effect waves-light red"  onclick="symbol('/')">
                            <span id="operators">/</span>
                         </button>
                     </div>       
                 <!-- </div> -->
                 </div>
-                <center><button class="waves-effect waves-light btn-small" id="equaloperator">=</button></center>
+                <center><button class="waves-effect waves-light btn-small" id="equaloperator" onclick='calculate()'>=</button></center>
             </div>
             <div class="col l4 m4 s2"></div>
         </div>
