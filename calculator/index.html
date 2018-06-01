@@ -4,9 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Scientific Calculator</title>
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+     <!-- Compiled and minified JavaScript -->
+     <script 
+     src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+     <!--external script link-->
+     <script src="js/calcul.js"></script>
+     <!--external style link-->
+     <link rel="stylesheet" href="css/style.css">
+     <!--materialize icons header-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Calculator(python)</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="row">
+            <div class="col l4 m4 s2"></div>
+            <div class="col l3 m4 s8" id="maincontent">
+                <input  id="display" type="text" class="validate">
+                <input  id="displayarea" type="text" class="validate" onkeypress="return numbersOnly(event)">
+                <button class="waves-effect waves-light btn-small" id="backspace">
+                        <i class="material-icons right">backspace</i>backspace
+                </button>
+                <br><br>
+                <!-- <div class="container"> -->
+                    <div class="row" id="buttons">
+                        <div class="col l3 m3 s3">
+                            <button class="btn-floating btn-medium waves-effect waves-light red">1</button>
+                        </div>
+                        <div class="col l3 m3 s3">
+                            <button class="btn-floating btn-medium waves-effect waves-light red">2</button>
+                        </div>
+                        <div class="col l3 m3 s3">
+                            <button class="btn-floating btn-medium waves-effect waves-light red">3</button>
+                        </div>
+                        <div class="col l3 m3 s3">
+                            <button class="btn-floating btn-medium waves-effect waves-light red">
+                                    <i class="material-icons">add</i>
+                            </button>
+                        </div>
+                    <br><br>
+                        <div class="col l3 m3 s3">
+                            <button class="btn-floating btn-medium waves-effect waves-light red">4</button>
+                        </div>
+                        <div class="col l3 m3 s3">
+                            <button class="btn-floating btn-medium waves-effect waves-light red">5</button>
+                        </div>
+                        <div class="col l3 m3 s3">
+                            <button class="btn-floating btn-medium waves-effect waves-light red">6</button>
+                        </div>
+                        <div class="col l3 m3 s3">
+                            <button class="btn-floating btn-medium waves-effect waves-light red">
+                               <span id="operators">-</span>
+                            </button>
+                        </div>
+                    <br><br>
+                    <div class="col l3 m3 s3">
+                        <button class="btn-floating btn-medium waves-effect waves-light red">7</button>
+                    </div>
+                    <div class="col l3 m3 s3">
+                        <button class="btn-floating btn-medium waves-effect waves-light red">8</button>
+                    </div>
+                    <div class="col l3 m3 s3">
+                        <button class="btn-floating btn-medium waves-effect waves-light red">9</button>
+                    </div>
+                    <div class="col l3 m3 s3">
+                        <button class="btn-floating btn-medium waves-effect waves-light red">
+                            <span id="operators">*</span>
+                        </button>
+                    </div>
+                    <br><br>
+                    <div class="col l3 m3 s3">
+                        <button class="btn-floating btn-medium waves-effect waves-light red">c</button>
+                    </div>
+                    <div class="col l3 m3 s3">
+                        <button class="btn-floating btn-medium waves-effect waves-light red">0</button>
+                    </div>
+                    <div class="col l3 m3 s3">
+                        <button class="btn-floating btn-medium waves-effect waves-light red">.</button>
+                    </div>
+                    <div class="col l3 m3 s3">
+                        <button class="btn-floating btn-medium waves-effect waves-light red">
+                           <span id="operators">/</span>
+                        </button>
+                    </div>       
+                <!-- </div> -->
+                </div>
+                <center><button class="waves-effect waves-light btn-small" id="equaloperator">=</button></center>
+            </div>
+            <div class="col l4 m4 s2"></div>
+        </div>
+    </div>
 </body>
 </html>
